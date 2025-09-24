@@ -1,4 +1,4 @@
-# 🎵 Music Streaming Analysis Using Spark Structured APIs
+#  Music Streaming Analysis Using Spark Structured APIs
 
 ## 📌 Overview
 This project analyzes **user listening behavior** and **music trends** using the **Spark Structured API**.  
@@ -11,7 +11,7 @@ The assignment is part of **ITCS 6190/8190 — Cloud Computing for Data Analysis
 
 ---
 
-## 📂 Dataset Description
+##  Dataset Description
 Two CSV files are generated with the provided input generator:
 1. **listening_logs.csv**  
    - `user_id`: Unique ID of the user  
@@ -184,4 +184,9 @@ Before starting the assignment, ensure you have the following software installed
 ---
 ## 🛠️ Errors and Resolutions
 
-During execution, you may encounter common issues. Below are fixes:
+
+| Error / Issue | Cause | Resolution |
+|---------------|-------|------------|
+| `ModuleNotFoundError: No module named 'pyspark'` | PySpark is not installed in your Python environment. | Install PySpark using pip: `pip install pyspark`. Verify installation with `python3 -c "import pyspark; print(pyspark.__version__)"`. |
+| `FileNotFoundError: listening_logs.csv` | Input CSV files are missing or the path is incorrect. | Run the input generator: `python3 input_generator.py`. Ensure the CSVs are in the same directory as `main.py`. |
+
