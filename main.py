@@ -56,7 +56,7 @@ top_genre = user_genre_counts.join(
 # Calculate loyalty score
 loyalty = top_genre.join(total_plays, on="user_id").withColumn(
     "loyalty_score", col("top_genre_count") / col("total")
-).filter(col("loyalty_score") > 0.8)
+).filter(col("loyalty_score") > 0.4)
 
 loyalty.write.mode("overwrite").csv("output/genre_loyalty_scores/")
 
